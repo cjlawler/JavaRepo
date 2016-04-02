@@ -35,7 +35,7 @@ public class Test
 			System.out.println("obj is " + obj);
 			
 			Set<String> objKeys = obj.keySet();
-			Iterator it = objKeys.iterator();
+			Iterator<String> it = objKeys.iterator();
 			Object o = null;
 			while(it.hasNext())
 			{
@@ -56,20 +56,6 @@ public class Test
 			//JsonObject resultsObject = dataObject.getJsonObject("results");
 			JsonArray resultsArray = dataObject.getJsonArray("results");
 			System.out.println("resultsObject: " + resultsArray);
-			
-			it = resultsArray.iterator();
-			while(it.hasNext())
-			{
-				o = it.next();
-				System.out.println("Element: " + o);
-			}
-			/*Set<String> resultKeys = resultsObject.keySet();
-			it = resultKeys.iterator();
-			while(it.hasNext()){
-				o = it.next();
-				System.out.println("Key: " + o);
-				System.out.println("Value: " + resultsObject.get(o));
-			}*/
 		}
 		catch(Exception e)
 		{
