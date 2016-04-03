@@ -26,8 +26,6 @@ public class Test
 		try
 		{
 			URL url = new URL("http://gateway.marvel.com:80/v1/public/characters?name=Hawkeye&apikey=802e2de29e6813d6ffd4258e9a09210d&ts=1&hash=a57e51c7d7a8810f3da8d1c58d6c9cc4");
-			//URL url = new URL("http://date.jsontest.com/?service=ip");
-			//URL url = new URL("http://gateway.marvel.com/v1/comics/?ts=1&apikey=802e2de29e6813d6ffd4258e9a09210d&hash=a57e51c7d7a8810f3da8d1c58d6c9cc4");
 			InputStream is = url.openStream();
 			JsonReader rdr = Json.createReader(is);			
 			JsonObject obj = rdr.readObject();
@@ -53,7 +51,6 @@ public class Test
 				System.out.println("Key: " + o);
 				System.out.println("Value: " + dataObject.get(o));
 			}
-			//JsonObject resultsObject = dataObject.getJsonObject("results");
 			JsonArray resultsArray = dataObject.getJsonArray("results");
 			System.out.println("resultsObject: " + resultsArray);
 		}
